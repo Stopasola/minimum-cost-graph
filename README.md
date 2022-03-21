@@ -1,5 +1,8 @@
 # Dijkstra and Floyd-Warshall algorithms comparison sekking minimum cost 
 
+![image](https://img.shields.io/github/languages/top/stopasola/minimum-cost-graph)
+
+
 ## Introduction
 
 In this work was analyzed the chronological performance spent in distance for a given set of graphs, implementing Dijkstra and Floyd-Warshall algorithms. Beyond chronological time analysis, the asymptotic complexity of both source codes was also mesured, seeking to understand the results obtained during the execution.
@@ -153,7 +156,7 @@ Finally, in function a, it is analyzed whether the value of P is less than 1, if
 considered sparse, otherwise it is considered dense.
 
 
-###### Chronological time spent executing the algorithms:
+#### Chronological time spent executing the algorithms:
 
 The calculation of the chronological times of each function was done individually
 calculating only the time each function executed, leaving aside parts
@@ -189,25 +192,39 @@ possible, so the algorithm analyzes non-existent edges consuming more processing
 only existing edges. To corroborate the performance analysis, within the analyzed set, all graphs are considered spaces according to the formula
 implemented.
 
-###### Asymptotic complexity analysis
+#### Asymptotic complexity analysis
 
-In Figure 10, after analyzing line by line, we arrive at the following complexity of the algorithm:
-O( N 2 ), however as the job requirement required the calculation of all paths
-possible, the calculated function was executed for the n vertices present in the graph, making
-thus its final complexity O( ( N 2 ) * n), ie O( N 3 ).
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/17886190/159343719-ecbdce85-4a17-40ed-bdb0-462b6732a01f.png"/>
+</p>
 
-In Figure 11, after analyzing line by line, we arrive at the following complexity of the algorithm:
-O(N 3 ).
-Conclusion
-After the implementation and analysis of the results, it was concluded first,
-through verification by calculus, that all graphs were sparse, that is, their number
-of edges was considerably less than the number of vertices. Since this check is
-It is possible to observe that given a sparse graph, the running time for Dijkstra will be
-shorter than the execution time for Floyd Warshall due to the fact that Dijkstra only
-checks the distances between vertices where there are edges connecting them, while Floyd
-Warshall tests all vertices even if there is no edge between them. About
-asymptotic analysis, according to the implementation made, both algorithms had a
-complexity of O( N 3 ), a result that corroborates the data found in the literature.
+In the figure above, we arrive at the following complexity of the algorithm:
+
+> O( N<sup>2</sup> ) 
+
+however as the job requirement required the calculation of all paths
+possible, the calculated function was executed for the n vertices present in the graph, making thus its final complexity 
+
+> O((N<sup>2</sup>)*n), ie O(N<sup>3</sup>)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/17886190/159343800-e8471505-a3bc-4ae5-a567-a9334f7eddf7.png"/>
+</p>
+
+Above after analyzing line by line, we arrive at the following complexity of the algorithm:
+O(N<sup>3</sup>).
+
+## Conclusion
+
+After the implementation and analysis of the results, it was concluded first, through verification by calculus, that all graphs were sparse, that is, their number of edges was considerably less than the number of vertices. 
+
+Since this check it is possible to observe that given a sparse graph, the running time for Dijkstra will be
+shorter than the execution time for Floyd Warshall due to the fact that Dijkstra only checks the distances between vertices where there are edges connecting them, while Floyd Warshall tests all vertices even if there is no edge between them. 
+
+About asymptotic analysis, according to the implementation made, both algorithms had a
+complexity of O( N<sup>3</sup> ), a result that corroborates the data found in the literature.
+
+
 Thus, we conclude that the algorithm used to solve the problem depends on the
 dataset, that is, for sparse graphs (few edges between vertices) the solution
 the most suitable would be the implementation of dijkstra, as for denser graphs (many edges
