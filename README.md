@@ -9,7 +9,7 @@ In this work was analyzed the chronological performance spent in distance for a 
 
 ## Hardware Methods and Configurations
 
-As the programming language, python 3.7 [3] was used with a computer with the following settings:
+As the programming language, python 3.7 [3] was used with a computer with the following specs:
 
 - Operating System: Windows 10 Professional, 64-bit
 - Processor: Intel Core i5-4200U CPU @ 1.60GHz
